@@ -20,6 +20,9 @@ gem 'jwt'
 # SimpleCommand to build Service Objects
 gem 'simple_command'
 
+# Foreman utility for managing multiple processes
+gem 'foreman'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
