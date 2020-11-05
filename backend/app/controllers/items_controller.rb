@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  # before_action :authenticate_request
   before_action :set_item, only: [:show, :update, :destroy]
 
   # GET /items
@@ -46,6 +47,6 @@ class ItemsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def item_params
-      params.require(:item).permit(:img_url, :img_url2, :img_url3, :img_url4, :img_url5, :title, :description, :state, :city, :location)
+      params.require(:item).permit(:img_url, :img_url2, :img_url3, :img_url4, :img_url5, :title, :description, :state, :city, :location, :category)
     end
 end

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { getUsersFetch } from './actions/userActions'
+import HomeContainer from './containers/HomeContainer';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  componentDidMount = () => {
+    this.props.getUsersFetch();
+  }
+
+  render() {
+    console.log(this.props.users)
+    return (
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomeContainer}/> 
+        </Switch>
+      </Router>
+    )
+  }
 }
 
-export default App;
+
+const mapDispatchToProps = dispatch => ({
+  getUsersFetch: () => dispatch(getUsersFetch())
+})
+
+export default connect(null, mapDispatchToProps)(App);

@@ -190,3 +190,994 @@ Filter chain halted as :authenticate_request rendered or redirected
 Completed 401 Unauthorized in 8ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 654)
 
 
+Started POST "/authenticate" for 127.0.0.1 at 2020-11-04 21:53:18 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"user"=>{"username"=>"08fdange", "password"=>"[FILTERED]", "email"=>"08fdange@gmail.com", "avatar"=>"http://www.google.com"}, "authentication"=>{"user"=>{"username"=>"08fdange", "password"=>"[FILTERED]", "email"=>"08fdange@gmail.com", "avatar"=>"http://www.google.com"}}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 12ms (Views: 0.8ms | ActiveRecord: 1.4ms | Allocations: 2689)
+
+
+Started OPTIONS "/authenticate" for ::1 at 2020-11-04 21:55:24 -0500
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/authenticate"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-11-04 21:56:46 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/frankdangelo/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/frankdangelo/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 22.7ms | Allocations: 406)
+Completed 200 OK in 41ms (Views: 30.5ms | ActiveRecord: 0.0ms | Allocations: 2057)
+
+
+Started GET "/authenticate" for ::1 at 2020-11-04 21:56:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/authenticate"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUsernameToUsers (20201105033958)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "username" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201105033958"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users?name=user%20one&username=userone&email=userone@gmail.com&password=[FILTERED]&password_confirmation=[FILTERED]" for ::1 at 2020-11-04 23:25:39 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (16.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/frankdangelo/pirateport/backend/app/controllers/users_controller.rb:2: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+...:authenticate_request, except :create
+...                              ^):
+  
+app/controllers/users_controller.rb:2: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/controllers/users_controller.rb:2: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+Started POST "/users?name=user%20one&username=userone&email=userone@gmail.com&password=[FILTERED]&password_confirmation=[FILTERED]" for ::1 at 2020-11-04 23:26:35 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"user one", "username"=>"userone", "email"=>"userone@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms | Allocations: 3360)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f8a36a44058>::AvatarUploader):
+  
+app/models/user.rb:3:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users?name=user%20one&username=userone&email=userone@gmail.com&password=[FILTERED]&password_confirmation=[FILTERED]" for ::1 at 2020-11-04 23:28:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"user one", "username"=>"userone", "email"=>"userone@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "userone@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "userone"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "user one"], ["email", "userone@gmail.com"], ["password_digest", "$2a$12$WqaKgcdBdA9YyuwIJ94xiOsghM77ilWwBI2s2NNGps/Tjxg4h6Uhq"], ["created_at", "2020-11-05 04:28:41.955156"], ["updated_at", "2020-11-05 04:28:41.955156"], ["username", "userone"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 201 Created in 581ms (Views: 2.5ms | ActiveRecord: 11.7ms | Allocations: 11184)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-11-04 23:40:14 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"08fdange", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"08fdange@gmail.com", "name"=>"Frank D'Angelo", "avatar"=>""}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 112ms (Views: 1.6ms | ActiveRecord: 0.6ms | Allocations: 9126)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-11-04 23:41:00 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"08fdange", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"08fdange@gmail.com", "name"=>"Frank D'Angelo", "avatar"=>""}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 17ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 5908)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-11-04 23:44:37 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "username"=>"08fdange", "name"=>"Frank D'Angelo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"name"=>"Frank D'Angelo", "email"=>"08fdange@gmail.com", "username"=>"08fdange"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (1.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "08fdange"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Frank D'Angelo"], ["email", "08fdange@gmail.com"], ["password_digest", "$2a$12$4wvzgoFIl0FqBWnQvLOYPekZZRw1y2hgKYJ6C5PuwU/dntGqWoQ4m"], ["created_at", "2020-11-05 04:44:37.418023"], ["updated_at", "2020-11-05 04:44:37.418023"], ["username", "08fdange"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 201 Created in 339ms (Views: 3.7ms | ActiveRecord: 5.8ms | Allocations: 4708)
+
+
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/authenticate?email=08fdange@gmail.com&password=[FILTERED]" for ::1 at 2020-11-04 23:50:33 -0500
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 601ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 1845)
+
+
+Started GET "/users" for ::1 at 2020-11-04 23:51:40 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 28ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1749)
+
+
+Started GET "/users?Authorization=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MDQ2MzgyMzR9.q_0DfmCzOiYcsOEVcdoWXTRdpN17mF422Iinb9Sc1hk" for ::1 at 2020-11-04 23:52:06 -0500
+Processing by UsersController#index as */*
+  Parameters: {"Authorization"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MDQ2MzgyMzR9.q_0DfmCzOiYcsOEVcdoWXTRdpN17mF422Iinb9Sc1hk"}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 129)
+
+
+Started GET "/users?Authorization=%22eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MDQ2MzgyMzR9.q_0DfmCzOiYcsOEVcdoWXTRdpN17mF422Iinb9Sc1hk%22" for ::1 at 2020-11-04 23:52:12 -0500
+Processing by UsersController#index as */*
+  Parameters: {"Authorization"=>"\"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MDQ2MzgyMzR9.q_0DfmCzOiYcsOEVcdoWXTRdpN17mF422Iinb9Sc1hk\""}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 129)
+
+
+Started GET "/users" for ::1 at 2020-11-04 23:52:47 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 25ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 1934)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-11-04 23:53:38 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"example@gmail.com", "username"=>"example", "name"=>"example", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"name"=>"example", "email"=>"example@gmail.com", "username"=>"example"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "example"], ["email", "example@gmail.com"], ["password_digest", "$2a$12$zGQ4MRGedqwODbmAU/.Y4O9iVfvVTSTYxTdy8gd6BJQA1qwWZ/lxu"], ["created_at", "2020-11-05 04:53:38.552797"], ["updated_at", "2020-11-05 04:53:38.552797"], ["username", "example"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 201 Created in 268ms (Views: 0.4ms | ActiveRecord: 3.3ms | Allocations: 4699)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-11-04 23:54:02 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"example@gmail.com", "username"=>"example", "name"=>"example", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"name"=>"example", "email"=>"example@gmail.com", "username"=>"example"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 282ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 4839)
+
+
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (3.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/users" for 127.0.0.1 at 2020-11-04 23:56:45 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "username"=>"08fdange", "name"=>"Frank D'Angelo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"name"=>"Frank D'Angelo", "email"=>"08fdange@gmail.com", "username"=>"08fdange"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "08fdange"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Frank D'Angelo"], ["email", "08fdange@gmail.com"], ["password_digest", "$2a$12$lz9pApMHPxFiy3eUx3MhnOdRgj5JTKGNtRYBrt5eXIYt0OW7RKnqC"], ["created_at", "2020-11-05 04:56:46.259393"], ["updated_at", "2020-11-05 04:56:46.259393"], ["username", "08fdange"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 201 Created in 271ms (Views: 1.8ms | ActiveRecord: 3.0ms | Allocations: 4701)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-11-04 23:58:42 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"example@gmail.com", "username"=>"example", "name"=>"example", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"name"=>"example", "email"=>"example@gmail.com", "username"=>"example"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "example"], ["email", "example@gmail.com"], ["password_digest", "$2a$12$JFj1.yXnCw8.erVDuNxqqeqEw7kY.eMPs9YIQTjfpMnbGyvCfPAh6"], ["created_at", "2020-11-05 04:58:42.744215"], ["updated_at", "2020-11-05 04:58:42.744215"], ["username", "example"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 201 Created in 257ms (Views: 1.0ms | ActiveRecord: 4.0ms | Allocations: 4698)
+
+
+Started POST "/users/auth?email=example@gmail.com&password=[FILTERED]" for 127.0.0.1 at 2020-11-05 00:01:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"example@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 577ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 7424)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 00:05:37 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 35ms (Views: 5.0ms | ActiveRecord: 1.7ms | Allocations: 2286)
+
+
+  [1m[35m (12.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 00:51:30 -0500
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"user"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 8ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 2890)
+
+
+Started POST "/users/auth?email=08fdange@gmail.com&password=[FILTERED]" for ::1 at 2020-11-05 00:53:35 -0500
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 693ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 7572)
+
+
+Started POST "/users/auth?email=08fdange@gmail.com&password=[FILTERED]" for 127.0.0.1 at 2020-11-05 00:53:43 -0500
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 698ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1284)
+
+
+Started POST "/users/auth?email=08fdange@gmail.com&password=[FILTERED]" for 127.0.0.1 at 2020-11-05 00:54:00 -0500
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 881ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 1283)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 00:55:09 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"user"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 13ms (Views: 1.2ms | ActiveRecord: 0.8ms | Allocations: 817)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 00:55:26 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"user"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 835)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 00:56:06 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 817)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 00:58:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 21ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 2477)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 00:58:50 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 810)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 00:58:55 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 808)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 00:58:57 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 808)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 01:00:00 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"user"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 3ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 808)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 01:00:14 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"user"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 808)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 01:02:10 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"user"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 8ms (Views: 0.8ms | ActiveRecord: 0.8ms | Allocations: 808)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 01:03:19 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 576ms (Views: 0.3ms | ActiveRecord: 5.3ms | Allocations: 7223)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 01:44:47 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 59ms (Views: 17.4ms | ActiveRecord: 0.4ms | Allocations: 2320)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 01:48:37 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 54ms (Views: 16.7ms | ActiveRecord: 4.1ms | Allocations: 1953)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 01:48:47 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 538ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1276)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 01:51:56 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"example@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 505ms (Views: 1.9ms | ActiveRecord: 0.9ms | Allocations: 1257)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 01:53:39 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 45ms (Views: 33.2ms | ActiveRecord: 0.4ms | Allocations: 1952)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 01:53:48 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 506ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1256)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 01:53:57 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 505ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 1254)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 01:55:30 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 1952)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 01:55:37 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 522ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1253)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 01:57:40 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 428ms (Views: 2.8ms | ActiveRecord: 1.3ms | Allocations: 1955)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 02:16:38 -0500
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 505ms (Views: 0.9ms | ActiveRecord: 0.6ms | Allocations: 1274)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 02:17:13 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 496ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1254)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:17:18 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 27ms (Views: 18.4ms | ActiveRecord: 1.0ms | Allocations: 1992)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 02:17:25 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 637ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1255)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:25:12 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 26ms (Views: 10.6ms | ActiveRecord: 1.1ms | Allocations: 1993)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:25:21 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 1.7ms | Allocations: 1952)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 02:35:44 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 520ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 1273)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 02:36:13 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 506ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1254)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:38:36 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 37ms (Views: 12.7ms | ActiveRecord: 2.6ms | Allocations: 1992)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:38:59 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 24ms (Views: 9.4ms | ActiveRecord: 1.9ms | Allocations: 1952)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 02:39:15 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 501ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1254)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:40:06 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 24ms (Views: 14.7ms | ActiveRecord: 1.3ms | Allocations: 1952)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 02:42:34 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 526ms (Views: 1.8ms | ActiveRecord: 1.0ms | Allocations: 1253)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 02:43:26 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 531ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1254)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:43:37 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 24ms (Views: 14.7ms | ActiveRecord: 0.5ms | Allocations: 1952)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 02:43:50 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 265ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 688)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 02:44:01 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 494ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1254)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:44:52 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 31ms (Views: 11.7ms | ActiveRecord: 3.0ms | Allocations: 1952)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 02:44:59 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 515ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 1254)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:46:31 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 15ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 1952)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:47:52 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 24ms (Views: 11.2ms | ActiveRecord: 1.2ms | Allocations: 1952)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:50:04 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 173ms (Views: 15.7ms | ActiveRecord: 1.4ms | Allocations: 1952)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 02:51:14 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 675ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1253)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:51:40 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 16ms (Views: 9.6ms | ActiveRecord: 0.5ms | Allocations: 1952)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:52:49 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 1952)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:53:43 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 7.3ms | ActiveRecord: 0.4ms | Allocations: 1952)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:53:54 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 1952)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:54:00 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 0.3ms | Allocations: 1952)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 02:58:37 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"example@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 564ms (Views: 1.7ms | ActiveRecord: 1.1ms | Allocations: 1256)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 02:58:56 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 20ms (Views: 12.2ms | ActiveRecord: 1.0ms | Allocations: 1952)
+
+
+Started GET "/" for ::1 at 2020-11-05 03:06:45 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/frankdangelo/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/frankdangelo/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.1ms | Allocations: 406)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 2061)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 03:08:29 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 16ms (Views: 1.7ms | ActiveRecord: 1.1ms | Allocations: 7445)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 03:09:34 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 0.8ms | Allocations: 1970)
+
+
+Started POST "/users/auth" for 127.0.0.1 at 2020-11-05 03:10:10 -0500
+Processing by AuthenticationController#authenticate as JSON
+  Parameters: {"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"08fdange@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "08fdange@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 519ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1572)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 03:10:14 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1970)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 03:23:41 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 38ms (Views: 2.5ms | ActiveRecord: 1.4ms | Allocations: 7445)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 03:23:56 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.7ms | Allocations: 1970)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 03:23:58 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1970)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 03:24:13 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1970)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 03:24:47 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1970)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2020-11-05 03:36:11 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2020-11-05 03:44:41 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 99ms (Views: 18.0ms | ActiveRecord: 1.6ms | Allocations: 1993)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-05 03:44:46 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 1952)
+
+
