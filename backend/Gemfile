@@ -23,6 +23,12 @@ gem 'simple_command'
 # Foreman utility for managing multiple processes
 gem 'foreman'
 
+#cloudinary for picture storage
+gem 'cloudinary'
+
+#Serializer
+gem 'fast_jsonapi'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
