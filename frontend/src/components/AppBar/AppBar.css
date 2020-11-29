@@ -1,0 +1,8 @@
+#appbar{
+    /* background-color: rgb(90, 112, 134); */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(19,207,188,1) 66%, rgba(0,212,255,1) 100%);
+}
+
+.MuiAppBar-colorPrimary{
+    background-color: rgb(100, 120, 141);
+}
