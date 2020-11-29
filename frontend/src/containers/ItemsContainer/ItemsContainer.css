@@ -1,0 +1,28 @@
+.grid-container {
+    display: grid;
+    margin-left: 15px;
+    margin-right: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+    align-content: center;
+    grid-auto-rows: auto;
+}
+
+
+/* .grid-item {
+    align-content: center;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    padding: 20px;
+}
+
+.grid-item table {
+    
+}
+
+.picture {
+    justify-self: center;
+    height: 10rem;
+    width: auto;
+} */
