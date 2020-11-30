@@ -36,6 +36,7 @@ const DeleteItemModal = props => {
   const handleDeleteButton = () => {
       props.deleteItem(props.item)
       handleClose()
+      props.routerProps.history.push('/items')
   }
 
   return (

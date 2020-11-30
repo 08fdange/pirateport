@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { autoLogin,logout, getUsers } from './actions/userActions';
 import { fetchItems, deleteItem } from './actions/itemActions';
@@ -28,7 +29,6 @@ class App extends React.Component {
     }, 5000);
   }
 
-
   render() {
 
     return (
@@ -37,7 +37,7 @@ class App extends React.Component {
         <Router>
           <AppBarComp loggedIn={this.props.loggedIn} logout={this.props.logout} />
             <main>
-            {/* style={{marginTop: '64px'}} */}
+              <Route exact path='/' render={() => <HomeContainer loggedIn={this.props.loggedIn} />} />
               {
                 !!this.props.errors ? <Errors errors={this.props.errors} /> : null
               }
@@ -48,12 +48,14 @@ class App extends React.Component {
               { 
                 !this.props.loggedIn ? (
                   <div>
-                    <Route exact path='/' render={() => <HomeContainer/>} />
                     <Route exact path='/signup' render={routerProps => <Signup routerProps={routerProps} />} />
                     <Route exact path='/login' render={routerProps => <Login routerProps={routerProps} />} />
                   </div>
                 )
-                : (
+                : null }
+                {
+                  !!this.props.loggedIn ?
+                (
                   <div>
 
                     <Route path= '/users/:username/items/new' render={routerProps => <NewItemForm userId={this.props.userId} routerProps={routerProps} />} />
@@ -64,7 +66,7 @@ class App extends React.Component {
 
 
                       const usernameParam = routerProps.match.params.username
-                      const userObj = this.props.users.find(user => user.attributes.username === usernameParam)
+                      let userObj = this.props.users.find(user => user.attributes.username === usernameParam)
 
                       return(
                         <ProfileContainer
@@ -113,7 +115,9 @@ class App extends React.Component {
 
 
                   </div>
-                )
+                ) : (
+                  <Redirect to='/' />
+                ) 
               }
 
             </main>

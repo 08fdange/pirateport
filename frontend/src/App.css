@@ -25,6 +25,13 @@
 
 }
 
+/* Item date styling */
+.item-date-updated {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 /* Single Item Styling */
 
 .single-item-layout {

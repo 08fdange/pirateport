@@ -9,12 +9,13 @@ import DefaultAvatar from '../../containers/ProfileContainer/no-profile-photo.pn
 import DefaultPicture from './no-pic.png';
 
 const SingleItem = props => {
+
     return(
         <div>
         {!props.item ? (<div>Loading...</div>) :
             (<div className='single-item-layout'>
                 <div className='item-user-info'>
-                    <NavLink to={props.user.attributes.avatar.image_url || DefaultAvatar}>
+                    <NavLink to={`/users/${props.user.attributes.username}`}>
                         <img 
                             className="item-user-avatar" 
                             src={props.user.attributes.avatar.image_url || DefaultAvatar} 
@@ -52,7 +53,7 @@ const SingleItem = props => {
                                     Edit Item
                                 </NavLink>
                             </Button>
-                            <DeleteItemModal deleteItem={props.deleteItem} item={props.item} />
+                            <DeleteItemModal deleteItem={props.deleteItem} item={props.item} routerProps={props.routerProps} />
                         </div>
                     ): null}
                     <Divider/>

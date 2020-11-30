@@ -1,14 +1,54 @@
-.grid-container {
-    display: grid;
-    margin-left: 15px;
-    margin-right: 15px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    justify-content: center;
-    align-content: center;
-    grid-auto-rows: auto;
+@media (min-width: 1300px) {
+    .grid-container {
+        display: grid;
+        margin-left: 15px;
+        margin-right: 15px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        justify-content: center;
+        align-content: center;
+        grid-auto-rows: auto;
+    }
 }
 
+@media (max-width: 1299) {
+    .grid-container {
+        display: grid;
+        margin-left: 15px;
+        margin-right: 15px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        justify-content: center;
+        align-content: center;
+        grid-auto-rows: auto;
+    }
+}
+
+@media (max-width: 780px) {
+    .grid-container {
+        display: grid;
+        margin-left: 15px;
+        margin-right: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        justify-content: center;
+        align-content: center;
+        grid-auto-rows: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        display: grid;
+        margin-left: 15px;
+        margin-right: 15px;
+        grid-template-columns: 1fr;
+        /* grid-gap: 10px; */
+        justify-content: center;
+        align-content: center;
+        grid-auto-rows: auto;
+    }
+}
 
 /* .grid-item {
     align-content: center;

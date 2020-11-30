@@ -34,12 +34,13 @@ const Item = props => {
             </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button 
-                size="small" 
-                color="primary" 
-                onClick={clickHandler}>
-                Last Updated: {moment(props.item.attributes.updated_at).format("MMM Do YYYY")}  
-            </Button>
+                <Button
+                    className='item-date-updated'
+                    size="small" 
+                    color="primary" 
+                    onClick={clickHandler}>
+                    Last Updated: {moment(props.item.attributes.updated_at).format("MMM Do YYYY")}  
+                </Button>
             </CardActions>
         </Card>
     )
