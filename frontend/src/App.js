@@ -15,7 +15,7 @@ import NewItemForm from './components/NewItemForm/NewItemForm.js';
 import EditItemForm from './components/EditItemForm/EditItemForm.js';
 import Errors from './components/Errors/Errors.js';
 import Error from './components/Errors/Error.js';
-import HomeContainer from './containers/HomeContainer';
+import HomeContainer from './containers/HomeContainer/HomeContainer';
 import Footer from './components/Footer.js';
 import './App.css';
 
@@ -37,7 +37,7 @@ class App extends React.Component {
         <Router>
           <AppBarComp loggedIn={this.props.loggedIn} logout={this.props.logout} />
             <main>
-              <Route exact path='/' render={() => <HomeContainer loggedIn={this.props.loggedIn} />} />
+              <Route exact path='/' render={routerProps => <HomeContainer loggedIn={this.props.loggedIn} routerProps={routerProps} />} />
               {
                 !!this.props.errors ? <Errors errors={this.props.errors} /> : null
               }

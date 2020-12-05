@@ -33,3 +33,6 @@
 
 # Ignore Cloudinary.yml
 /config/cloudinary.yml
+
+# Ignore development.log
+/log/development.log

@@ -5,4 +5,5 @@
 
 .MuiAppBar-colorPrimary{
     background-color: rgb(100, 120, 141);
+    font-family: 'Ubuntu';
 }

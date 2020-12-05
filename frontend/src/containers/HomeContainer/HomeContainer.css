@@ -1,0 +1,16 @@
+.logout-home {
+    display: grid;
+    margin-left: 25px;
+    margin-right: 25px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 500px;
+    color: white;
+}
+
+.login-div{
+
+}
+
+.signup-div{
+    
+}

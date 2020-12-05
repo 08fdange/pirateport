@@ -24,9 +24,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     minHeight: '94vh',
+    position: 'fixed',
+    bottom: 0,
+    width: '100%',
   },
   footer: {
-    padding: theme.spacing(1, 1),
     marginTop: 'auto',
     backgroundColor:
       theme.palette.type === 'dark' ? theme.palette.grey[200] : theme.palette.grey[800],

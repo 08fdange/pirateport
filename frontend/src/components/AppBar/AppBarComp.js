@@ -29,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(2),
     },
     title: {
-      flexGrow: 1
+      flexGrow: 1,
+      fontFamily: 'Pirata One'
     },
 }));
 
@@ -60,17 +61,17 @@ const AppBarComp = props => {
     //AppBar Buttons
     const loginButtons = (
       <div>
-        <NavLink style={{ marginRight: '10px', color: 'white' }} to='/items'>Items</NavLink>
-        <NavLink style={{ marginRight: '10px', color: 'white' }} to={`/users/${localStorage.currentUser}/items/new`}>New Item</NavLink>
-        <NavLink style={{ marginRight: '10px', color: 'white' }} to={`/users/${localStorage.currentUser}`}>Profile</NavLink>
+        <NavLink style={{ marginRight: '10px', color: 'white', textDecoration: 'none' }} to='/items'>Items</NavLink>
+        <NavLink style={{ marginRight: '10px', color: 'white', textDecoration: 'none' }} to={`/users/${localStorage.currentUser}/items/new`}>New Item</NavLink>
+        <NavLink style={{ marginRight: '10px', color: 'white', textDecoration: 'none' }} to={`/users/${localStorage.currentUser}`}>Profile</NavLink>
         <Button onClick={props.logout} color="inherit">Logout</Button>
       </div>
     )
 
     const logoutButtons = (
       <div>
-        <NavLink style={{ marginRight: '10px', color: 'white' }} to='/signup'>Signup</NavLink>
-        <NavLink style={{ marginRight: '10px', color: 'white' }} to='/login'>Login</NavLink>
+        <NavLink style={{ marginRight: '10px', color: 'white', textDecoration: 'none' }} to='/signup'>Signup</NavLink>
+        <NavLink style={{ marginRight: '10px', color: 'white', textDecoration: 'none' }} to='/login'>Login</NavLink>
       </div>
     )
     
