@@ -1,4 +1,5 @@
 import React from 'react';
+import WelcomeVisitor from '../../components/WelcomeVisitor.js';
 import './HomeContainer.css';
 
 class HomeContainer extends React.Component {
@@ -7,13 +8,8 @@ class HomeContainer extends React.Component {
             <div className='home-page'>
                 {!this.props.loggedIn ? 
                     (
-                        <div className='logout-home'>
-                            <div className='login-div'>
-                                <p>Login</p>
-                            </div>
-                            <div className='signup-div'>
-                                <p>Signup</p>
-                            </div>
+                        <div className='logout-home' style={{textAlign: 'center', alignItems: 'center'}}>
+                            <WelcomeVisitor/>
                         </div>
                     ) 
                     : 
